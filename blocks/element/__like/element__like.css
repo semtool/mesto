@@ -1,0 +1,11 @@
+
+.elemet__like {
+  margin: 0px;
+  background-color: #FFFFFF;
+  border: #FFFFFF;
+  cursor: pointer;
+}
+
+.elemet__like:hover {
+  opacity: .5;
+}

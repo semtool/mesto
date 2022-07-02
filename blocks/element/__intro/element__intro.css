@@ -1,0 +1,10 @@
+.elemet__intro {
+  padding:25px 15px 31px 21px;
+  display: flex;
+  max-height: 100%;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items:flex-end;
+  background-color: #FFFFFF;
+  border-radius: 0px 0px 10px 10px;
+}

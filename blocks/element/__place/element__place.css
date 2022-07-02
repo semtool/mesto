@@ -1,0 +1,11 @@
+.elemet__place {
+  margin: 0px;
+  font-family: "Inter", "Arial", "Helvetica", sans-serif;
+  font-size: 24px;
+  line-height: 29px;
+  font-weight: 900;
+  color: #000000;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
