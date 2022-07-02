@@ -1,7 +1,7 @@
 .profile {
   display: grid;
   align-items: center;
-  grid-template-columns: auto 1fr 150px ;
+  grid-template-columns: auto 1fr 150px;
   margin: 40px auto 51px;
   width: 100%;
 }
