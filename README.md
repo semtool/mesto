@@ -32,5 +32,5 @@
 
 
 
-* [Сылка на проект](https://semtool.github.io/russian-travel/index.html)
+* [Сылка на проект](https://semtool.github.io/mesto/index.html)
 
