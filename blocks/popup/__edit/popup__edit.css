@@ -13,9 +13,17 @@
   color: #FFFFFF;
   background-color: #000000;
   border: #FFFFFF;
+  border-radius: 2px;
   cursor: pointer;
 }
 
 .popup__edit:hover {
   opacity: .8;
+}
+
+@media screen and (max-width:547px) {
+  .popup__edit {
+    font-size: 14px;
+    line-height: 17px; 
+  }
 }

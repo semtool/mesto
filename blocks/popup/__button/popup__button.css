@@ -9,6 +9,7 @@
   background:transparent;
   border: transparent;
   cursor: pointer;
+  margin-bottom: 8px;
 }
 
 .popup__button:hover {
