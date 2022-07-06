@@ -1,4 +1,4 @@
-.elemets {
+.elements {
   display: grid;
   max-height: 100%;
   max-width: 100%;
@@ -11,7 +11,7 @@
 
 
 @media screen and (max-width:960px) {
-  .elemets {
+  .elements {
     width: calc(100% - 38px);
   }
 }
