@@ -53,6 +53,7 @@
 @import url(../blocks/placepopup/__input/placepopup__input.css);
 @import url(../blocks/placepopup/__edit/placepopup__edit.css);
 @import url(../blocks/placepopup/__button/placepopup__button.css);
+@import url(../blocks/placepopup/__cross/placepopup__cross.css);
 
 @import url(../blocks/imagepopup/imagepopup.css);
 @import url(../blocks/imagepopup/__button/imagepopup__button.css);
@@ -61,6 +62,7 @@
 @import url(../blocks/imagepopup/__image-container/imagepopup__image-container.css);
 @import url(../blocks/imagepopup/__place-name/image__place-name.css);
 @import url(../blocks/imagepopup/_opened/imagepopup_opened.css);
+@import url(../blocks/imagepopup/__cross/imagepopup__cross.css);
 
 
 

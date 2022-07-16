@@ -91,6 +91,8 @@ let placeElement = page.querySelector ('.placepopup');
 let addPlace = page.querySelector('.profile__add');
 let closePlace = page.querySelector ('.placepopup__button');
 
+
+
 let baseElements = document.querySelector('.elements');
 
 
