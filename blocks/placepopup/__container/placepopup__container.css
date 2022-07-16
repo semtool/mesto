@@ -1,4 +1,4 @@
-.popup__container {
+.placepopup__container {
   display: flex;
   flex-direction: column;
   justify-content:center;
@@ -10,7 +10,7 @@
 }
 
 @media screen and (max-width:547px) {
-  .popup__container {
+  .placepopup__container {
     max-width: 282px;
   }
 }

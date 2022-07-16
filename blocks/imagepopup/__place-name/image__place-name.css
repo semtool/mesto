@@ -1,0 +1,15 @@
+.imagepopup__place-name{
+  font-family: "Inter", "Arial", "Helvetica", sans-serif;
+  margin: 10px 0px 0px 40px ;
+  text-align: start;
+  font-size: 12px;
+  line-height: 15px;
+  font-weight: 400;
+  color: #FFFFFF;
+}
+
+@media screen and (max-width:547px) {
+  .imagepopup__place-name {
+    margin: 10px 0px 0px 0px ;
+  }
+}

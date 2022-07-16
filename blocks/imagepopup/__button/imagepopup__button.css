@@ -1,0 +1,25 @@
+.imagepopup__button {
+  display: flex;
+  flex-direction: column;
+  align-self: flex-end;
+  align-items: center;
+  justify-content: center;
+  max-width: 32px;
+  max-height: 32px;
+  background:transparent;
+  border: transparent;
+  cursor: pointer;
+  margin-bottom: 8px;
+}
+
+.imagepopup__button:hover {
+  opacity: .6;
+}
+
+@media screen and (max-width:547px) {
+  .imagepopup__button {
+    max-width: 20px;
+    max-height: 20px;
+    margin-bottom: 16px;
+  }
+}

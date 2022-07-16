@@ -1,4 +1,4 @@
-.popup{
+.placepopup{
   position: fixed;
   top: 0;
   left: 0;
@@ -14,4 +14,3 @@
   transition: visibility 0.3s ease-in , opacity 0.3s ease-in;
   transition-delay: .1s;
 }
-

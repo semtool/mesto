@@ -1,8 +1,9 @@
 .element {
   display: flex;
+  position: relative;
   flex-direction: column;
   align-content: center;
-  max-width: 100%;
+  width: 100%;
   border-radius: 10px;
   margin: 0px;
   padding: 0px;

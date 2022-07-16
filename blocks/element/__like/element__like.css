@@ -1,6 +1,11 @@
 
 .element__like {
+  width: 22px;
+  height: 19px;
+  padding: 0px;
   margin: 0px;
+  box-sizing: content-box;
+  background: url('../../../../images/heart.svg') no-repeat;
   background-color: #FFFFFF;
   border: #FFFFFF;
   cursor: pointer;

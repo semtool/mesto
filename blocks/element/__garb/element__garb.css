@@ -1,0 +1,17 @@
+.element__garb{
+  position: absolute;
+  width: 18px;
+  height: 19px;
+  box-sizing: content-box;
+  z-index: 1;
+  padding: 0px;
+  top: 20px;
+  right: 20px;
+  background: url('../../../../images/Trash.svg') no-repeat;
+  border: #FFFFFF;
+  cursor: pointer;
+}
+
+.element__garb:hover {
+  opacity: .5;
+}
