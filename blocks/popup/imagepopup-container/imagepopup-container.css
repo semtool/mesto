@@ -1,8 +1,8 @@
-.placepopup__container {
+.imagepopup-container {
   display: flex;
   flex-direction: column;
   justify-content:center;
-  max-width: 510px;
+  max-width: 896px;
   width: 100%;
   height: 100%;
   padding: 0px;
@@ -10,7 +10,10 @@
 }
 
 @media screen and (max-width:547px) {
-  .placepopup__container {
-    max-width: 282px;
+  .imagepopup-container {
+    max-width: 240px;
   }
 }
+
+
+

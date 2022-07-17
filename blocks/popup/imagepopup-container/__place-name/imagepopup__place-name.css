@@ -1,15 +1,16 @@
-.placepopup__profile {
+.imagepopup__place-name {
   font-family: "Inter", "Arial", "Helvetica", sans-serif;
   margin: 0px 0px 54px;
   text-align: start;
   font-size: 24px;
   font-weight: 900;
   line-height: 24px;
-  color: #000000;
+  color:#FFFFFF;
+
 }
 
 @media screen and (max-width:547px) {
-  .placepopup__profile {
+  .imagepopup__place-name {
     font-size: 18px;
     line-height: 22px;
     margin: 0px 0px 75px;
