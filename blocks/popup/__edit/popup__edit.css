@@ -1,4 +1,4 @@
-.popup__submit {
+.popup__edit {
   font-family: "Inter", "Arial", "Helvetica", sans-serif;
   box-sizing: border-box;
   display: flex;
@@ -17,12 +17,12 @@
   cursor: pointer;
 }
 
-.popup__submit:hover {
+.popup__edit:hover {
   opacity: .8;
 }
 
 @media screen and (max-width:547px) {
-  .popup__submit {
+  .popup__edit {
     font-size: 14px;
     line-height: 17px; 
   }

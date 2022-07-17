@@ -1,6 +1,6 @@
 
 @media screen and (max-width:547px) {
-  .popup__close {
+  .popup__cross {
     max-width: 20px;
     max-height: 20px;
   }

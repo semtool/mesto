@@ -1,4 +1,4 @@
-.popup__place-image{
+.imagepopup__place-name{
   font-family: "Inter", "Arial", "Helvetica", sans-serif;
   margin: 10px 0px 0px 40px;
   text-align: start;
@@ -9,7 +9,7 @@
 }
 
 @media screen and (max-width:547px) {
-  .popup__place-image {
+  .imagepopup__place-name {
     margin: 10px 0px 0px 0px;
   }
 }

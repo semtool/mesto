@@ -1,8 +1,7 @@
 let page = document.querySelector(".page");
-/*let formElement = page.querySelector ('.popup');*/
-let profilePopup = page.querySelector ('.profile-popup');
+let formElement = page.querySelector ('.popup');
 let addName =page.querySelector('.profile__edit');
-let remCross = page.querySelector('.popup__button-profile');
+let remCross = page.querySelector('.popup__button');
 let nameInput = page.querySelector('.popup__input_person_name');
 let jobInput = page.querySelector('.popup__input_person_job');
 let textName = page.querySelector('.profile__title');
@@ -12,14 +11,14 @@ let textJob = page.querySelector('.profile__subtitle');
 
 
 function popChange(){
-  profilePopup.classList.add("popup_opened");
+  formElement.classList.add("popup_opened");
   nameInput.value = textName.textContent;
   jobInput.value = textJob.textContent;
 }
 
 
 function notChange(){
-  profilePopup.classList.remove("popup_opened"); 
+  formElement.classList.remove("popup_opened"); 
 }
 
 function formSubmitHandler (evt) {
@@ -32,7 +31,7 @@ function formSubmitHandler (evt) {
 
 addName.addEventListener('click', popChange);
 remCross.addEventListener('click', notChange);
-profilePopup.addEventListener('submit', formSubmitHandler);
+formElement.addEventListener('submit', formSubmitHandler);
 
 
 
@@ -88,9 +87,9 @@ formElement.addEventListener('submit', formSubmitHandler);*/
 
  
 /* Place form ниже */
-let placePopup = page.querySelector ('.place-popup');
+let placeElement = page.querySelector ('.placepopup');
 let addPlace = page.querySelector('.profile__add');
-let closePlace = page.querySelector ('.popup__button-place');
+let closePlace = page.querySelector ('.placepopup__button');
 
 
 
@@ -99,17 +98,17 @@ let baseElements = document.querySelector('.elements');
 
 let addCard = page.querySelector ('.placepopup__edit');
 
-let namePlaceInput = page.querySelector('.popup__input_place_name');
-let linkPlaceInput = page.querySelector('.popup__input_place_link');
+let namePlaceInput = page.querySelector('.placepopup__input_place_name');
+let linkPlaceInput = page.querySelector('.placepopup__input_place_link');
 
 
 
 function placeChange(){
-  placePopup.classList.add("placepopup_opened");
+  placeElement.classList.add("placepopup_opened");
 }
 
 function placeNotChange(){
-  placePopup.classList.remove("placepopup_opened");
+  placeElement.classList.remove("placepopup_opened");
 }
 
 /* Place form выше */
@@ -162,8 +161,8 @@ initialCards.forEach(function (element) {
   const butPlace = patternElemets.querySelector ('.element__garb');
   const likePlace = patternElemets.querySelector ('.element__like');
   const likeimage = patternElemets.querySelector ('.element__image-container');
-  const imagePopup = document.querySelector('.image-popup');
-  const imagePopupDel = document.querySelector('.popup__button-image');
+  const imagePopup = document.querySelector('.imagepopup');
+  const imagePopupDel = document.querySelector('.imagepopup__button');
 
   const imageName = document.querySelector('.imagepopup__place-name');
   const imageLink = document.querySelector('.imagepopup__image');
@@ -208,8 +207,8 @@ function addTempCard (){
   const likePlace = patternElemets.querySelector ('.element__like');
   const likeimage = patternElemets.querySelector ('.element__image-container');
   
-  const imagePopup = document.querySelector('.image-popup');
-  const imagePopupDel = document.querySelector('.popup__button-image');
+  const imagePopup = document.querySelector('.imagepopup');
+  const imagePopupDel = document.querySelector('.imagepopup__button');
 
   const imageName = document.querySelector('.imagepopup__place-name');
   const imageLink = document.querySelector('.imagepopup__image');
@@ -255,7 +254,23 @@ function cardSubmitHandler (evt) {
 addCard.addEventListener('click', addTempCard);
 addPlace.addEventListener('click', placeChange);
 closePlace.addEventListener('click', placeNotChange);
-placePopup.addEventListener('submit', cardSubmitHandler);
+placeElement.addEventListener('submit', cardSubmitHandler);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
