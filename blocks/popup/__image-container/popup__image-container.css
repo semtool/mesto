@@ -1,4 +1,4 @@
-.imagepopup__image-container {
+.popup__image-container {
   max-width: 816px;
   max-height: 540px;
   width: 100%;
@@ -7,7 +7,7 @@
 }
 
 @media screen and (max-width:547px) {
-  .imagepopup__image-container {
+  .popup__image-container {
     max-width: 240px;
     max-height: 299px;
   }

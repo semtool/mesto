@@ -18,8 +18,8 @@ const linkPlaceInput = placePopup.querySelector('.popup__input_place_link');
 
 const imagePopup = page.querySelector ('.image-popup');
 const closeImagePopup = imagePopup.querySelector('.popup__close');
-const bigImageName = imagePopup.querySelector('.imagepopup__place-name');
-const bigImageLink = imagePopup.querySelector('.imagepopup__image');
+const bigImageName = imagePopup.querySelector('.popup__place-name');
+const bigImageLink = imagePopup.querySelector('.popup__image');
 
 const baseElements = document.querySelector('.elements');
 const elemTemplate = document.querySelector('.element-temlate').content;

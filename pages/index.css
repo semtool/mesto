@@ -57,9 +57,12 @@
 
 
 
-@import url(../blocks/imagepopup/__image/imagepopup__image.css);
-@import url(../blocks/imagepopup/__image-container/imagepopup__image-container.css);
-@import url(../blocks/imagepopup/__place-name/image__place-name.css);
+/*@import url(../blocks/imagepopup/__image/imagepopup__image.css);*/
+@import url(../blocks/popup/__image/popup__image.css);
+/*@import url(../blocks/imagepopup/__image-container/imagepopup__image-container.css);*/
+@import url(../blocks/popup/__image-container/popup__image-container.css);
+/*@import url(../blocks/imagepopup/__place-name/image__place-name.css);*/
+@import url(../blocks/popup/__place-name/popup__place-name.css);
 
 
 
