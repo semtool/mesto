@@ -1,4 +1,4 @@
-.popup__button {
+.popup__close {
   display: flex;
   flex-direction: column;
   align-self: flex-end;
@@ -12,12 +12,12 @@
   margin-bottom: 8px;
 }
 
-.popup__button:hover {
+.popup__close:hover {
   opacity: .6;
 }
 
 @media screen and (max-width:547px) {
-  .popup__button {
+  .popup__close {
     max-width: 20px;
     max-height: 20px;
     margin-bottom: 16px;
