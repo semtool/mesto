@@ -12,8 +12,8 @@ const textJob = page.querySelector('.profile__subtitle');
 const placePopup = page.querySelector ('.place-popup');
 const addPlace = page.querySelector('.profile__add');
 const closePlacePopup = placePopup.querySelector('.popup__close');
-const namePlaceInput = placePopup.querySelector('.placepopup__input_place_name');
-const linkPlaceInput = placePopup.querySelector('.placepopup__input_place_link');
+const namePlaceInput = placePopup.querySelector('.popup__input_place_name');
+const linkPlaceInput = placePopup.querySelector('.popup__input_place_link');
 
 
 const imagePopup = page.querySelector ('.image-popup');
