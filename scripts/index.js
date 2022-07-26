@@ -107,10 +107,14 @@ function createCard(element){
   const showBigImage = cardElement.querySelector('.element__image-container');
   const likeHeartImage = cardElement.querySelector('.element__like');
   const deleteCard = cardElement.querySelector('.element__garb');
+  const cardImage = cardElement.querySelector ('.element__image');
+
 
 
   cardElement.querySelector ('.element__place').textContent = element.name;
-  cardElement.querySelector ('.element__image').src = element.link;
+  cardImage.src = element.link;
+  cardImage.alt = element.name;
+
  
 
 
