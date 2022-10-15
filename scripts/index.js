@@ -1,5 +1,7 @@
 const page = document.querySelector(".page");
-/*const mainPopup = page.querySelector ('.popup');*/
+
+const popList = document.querySelector('.popup');
+
 const profilePopup = page.querySelector ('.profile-popup');
 const addName =page.querySelector('.profile__edit');
 const closeProfilePopup = profilePopup.querySelector('.popup__close');
@@ -26,13 +28,49 @@ const elemTemplate = document.querySelector('.element-temlate').content;
 
 
 
+
 function openPopup(mainPopup){
   mainPopup.classList.add("popup_opened");
+  document.addEventListener('keydown',escapePopup);
+  document.addEventListener('click', escapeOverlayPopup);
 }
 
 function closePopup(mainPopup) {
   mainPopup.classList.remove('popup_opened');
+  document.removeEventListener('keydown',escapePopup);
+  document.removeEventListener('click', escapeOverlayPopup);
 }
+
+/*---esc---*/
+
+
+function escapePopup(evt) {
+  if (evt.key === 'Escape') {
+    const openPopup = document.querySelector('.popup_opened');
+    closePopup(openPopup);
+  }
+}
+
+function escapeOverlayPopup(evt) {
+  const openPopup = document.querySelector('.popup_opened');
+  if (evt.target === openPopup ) {
+    closePopup(openPopup);
+  }
+}
+
+
+/*
+function escapePopup (mainPopup){
+document.addEventListener('keydown',function (evt){
+  if (evt.key === 'Escape') {
+    closePopup(mainPopup);
+  }
+});
+}
+/*---esc---*/
+
+
+
 
 
 function submitProfilePopup (evt) {
@@ -54,6 +92,8 @@ closeProfilePopup.addEventListener('click', function(){
   closePopup(profilePopup);
 });
 
+
+
 profilePopup.addEventListener('submit', submitProfilePopup);
 
 
@@ -62,11 +102,16 @@ profilePopup.addEventListener('submit', submitProfilePopup);
 
 addPlace.addEventListener('click', function(){
   openPopup(placePopup);
+
 });
 
 closePlacePopup.addEventListener('click', function(){
   closePopup(placePopup);
+
+  
 });
+
+
 
 
 
@@ -110,12 +155,9 @@ function createCard(element){
   const cardImage = cardElement.querySelector ('.element__image');
 
 
-
   cardElement.querySelector ('.element__place').textContent = element.name;
   cardImage.src = element.link;
   cardImage.alt = element.name;
-
- 
 
 
   likeHeartImage.addEventListener('click', function (evt) {
@@ -130,10 +172,10 @@ function createCard(element){
 
   showBigImage.addEventListener('click', function(){
     openPopup(imagePopup);
+    
     bigImageName.textContent = element.name;
     bigImageLink.src = element.link;
     bigImageLink.alt = element.name;
-    
   });
 
   return cardElement;
@@ -142,8 +184,6 @@ function createCard(element){
 closeImagePopup.addEventListener('click', function(){
   closePopup(imagePopup);
 });
-
-
 
 function submitNewCardForm (evt) {
   evt.preventDefault();
@@ -158,13 +198,19 @@ function submitNewCardForm (evt) {
   closePopup(placePopup);
 }
 
-placePopup.addEventListener('submit', submitNewCardForm);
 
+placePopup.addEventListener('submit', submitNewCardForm);
 
 
 initialCards.forEach(function (element) {
   baseElements.prepend(createCard(element));
 })
+
+
+
+
+
+
 
 
 
