@@ -1,5 +1,5 @@
 
-/*                validitycod--------
+/*-----validitycod--------
 
 const showInputError = (formElement,inputElement, errorMessage) => {
   const errorElement = formElement.querySelector(`.${inputElement.id}-error`);
@@ -79,7 +79,7 @@ const enableValidation = () => {
   
 };
 
-enableValidation(); */
+enableValidation();     ---*/
 
 
 
