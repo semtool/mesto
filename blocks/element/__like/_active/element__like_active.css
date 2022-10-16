@@ -1,5 +1,5 @@
 .element__like_active{
   opacity:1;
 
-  background: url('../../../../images/blackheart.svg') center no-repeat;
+  background: url('../../../images/blackheart.svg') center no-repeat;
 }
