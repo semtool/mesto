@@ -5,7 +5,7 @@
   padding: 0px;
   margin: 0px;
   box-sizing: content-box;
-  background: url('../../../../images/heart.svg') no-repeat;
+  background: url('../../../images/heart.svg') no-repeat;
   background-color: #FFFFFF;
   border: #FFFFFF;
   cursor: pointer;
