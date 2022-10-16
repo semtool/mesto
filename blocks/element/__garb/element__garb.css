@@ -7,7 +7,7 @@
   padding: 0px;
   top: 20px;
   right: 20px;
-  background: url('../../../../images/Trash.svg') no-repeat;
+  background: url('../../../images/Trash.svg') no-repeat;
   border: #FFFFFF;
   cursor: pointer;
 }
