@@ -110,6 +110,7 @@ const hideInputError = (formElement,inputElement) => {
   inputElement.classList.remove(settinsList.inputErrorClass);
   errorElement.classList.remove(settinsList.errorClass);
   errorElement.textContent = '';
+
 };
 
 const checkInputValidity = (formElement, inputElement) => {
@@ -144,8 +145,7 @@ const toggleButtonState = (inputList, buttonElement) => {
     buttonElement.classList.remove(settinsList.inactiveButtonClass);
     buttonElement.removeAttribute('disabled');
   }
-
-}
+};
 
 const setEventListeners = (formElement) => {
  const inputList = Array.from(formElement.querySelectorAll(settinsList.inputSelector));
@@ -170,7 +170,6 @@ const enableValidation = (settinsList) => {
     
     });
     setEventListeners(formElement);
- 
   });
   
 };

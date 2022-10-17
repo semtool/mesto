@@ -29,49 +29,7 @@
       </section>
 
       <section class="elements">
-       <!-- <article class="element">
-          <img src="images/karachaevsk.jpg" alt="Карачаевск" class="element__image">
-          <button class="element__garb" type="button"></button>
-          <div class ="element__intro"> 
-            <h2 class="element__place">Карачаевск</h2>
-            <button class="element__like" type="button"></button>
-          </div>
-        </article>
-        <article class="element">
-          <img src="images/elbrus.jpg" alt="Эльбрус" class="element__image">
-          <div class ="element__intro"> 
-            <h2 class="element__place">Гора Эльбрус</h2>
-            <button class="element__like element__like_active" type="button"></button>
-          </div>
-        </article>
-        <article class="element">
-          <img src="images/dombay.jpg" alt="Домбай" class="element__image">
-          <div class ="element__intro"> 
-            <h2 class="element__place">Домбай</h2>
-            <button class="element__like element__like_active" type="button"></button>
-          </div>
-        </article>
-        <article class="element">
-          <img src="images/elbrus.jpg" alt="Эльбрус" class="element__image">
-          <div class ="element__intro"> 
-            <h2 class="element__place">Гора Эльбрус</h2>
-            <button class="element__like" type="button"></button>
-          </div>
-        </article>  
-        <article class="element">
-          <img src="images/dombay.jpg" alt="Карачаевск" class="element__image">
-          <div class ="element__intro"> 
-            <h2 class="element__place">Домбай</h2>
-            <button class="element__like" type="button"></button>
-          </div>
-        </article>
-        <article class="element">
-         <img src="images/karachaevsk.jpg" alt="Карачаевск" class="element__image">
-         <div class ="element__intro"> 
-           <h2 class="element__place">Карачаево-Черкессия</h2>
-           <button class="element__like" type="button"></button>
-         </div>
-        </article>-->
+       
       </section>
     </main>
 
@@ -82,7 +40,7 @@
     <div class="popup profile-popup">
       <div class="popup__container">
         <button class="popup__close" type="button"><img class="popup__icon-cross" src="images/CloseIcon.svg" alt="крест"></button>
-        <form class="popup__form" name="globalform" novalidate>
+        <form class="popup__form" name="profile-form" novalidate>
           <h2 class="popup__profile">Редактировать профиль</h2>
           <input type="text" name="name" id ="name-input" class="popup__input popup__input_person_name" placeholder="Имя" required minlength="2" maxlength="40">
           <span class = "popup__input-error name-input-error"></span>
@@ -96,7 +54,7 @@
     <div class="popup place-popup">
       <div class="popup__container">
         <button class="popup__close" type="button"><img class="popup__icon-cross" src="images/CloseIcon.svg" alt="крест"></button>
-        <form class="popup__form" name="globalform" novalidate>
+        <form class="popup__form" name="place-form" novalidate>
           <h2 class="popup__profile">Новое место</h2>
           <input type="text" name="place" id ="place-input" placeholder="Название" required class="popup__input popup__input_place_name" minlength="2" maxlength="30">
           <span class = "popup__input-error place-input-error"></span>
