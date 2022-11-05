@@ -1,3 +1,9 @@
+
+import { Card } from "./Card.js";
+
+import { FormValidator } from "../validate/FormValidator.js";
+
+
 const initialCards = [
   {
     name: 'Архыз',
@@ -26,6 +32,16 @@ const initialCards = [
 ];
 
 
+const settinsList={
+  formSelector: '.popup__form',
+  inputSelector: '.popup__input',
+  submitButtonSelector: '.popup__submit',
+  inactiveButtonClass: 'popup__submit_disabled',
+  inputErrorClass: 'popup__input_type_error',
+  errorClass: 'popup__input-error_active'
+}
+
+
 
 const page = document.querySelector(".page");
 
@@ -48,13 +64,15 @@ const placePopupSubmitButton = placePopup.querySelector('.popup__submit');
 
 
 
-const imagePopup = page.querySelector ('.image-popup');
+export const imagePopup = page.querySelector ('.image-popup');
 const imagePopupClosePopup = imagePopup.querySelector('.popup__close');
-const bigImageName = imagePopup.querySelector('.popup__place-name');
-const bigImageLink = imagePopup.querySelector('.popup__image');
+export const bigImageName = imagePopup.querySelector('.popup__place-name');
+export const bigImageLink = imagePopup.querySelector('.popup__image');
+
+
 
 const baseElements = document.querySelector('.elements');
-const elemTemplate = document.querySelector('.element-temlate').content;
+// const elemTemplate = document.querySelector('.element-temlate').content;
 
 
 
@@ -64,7 +82,8 @@ function hidePopupSubmitButton(buttonElement){
     buttonElement.setAttribute('disabled', true);
 }
 
-function openPopup(mainPopup){
+
+export function openPopup(mainPopup){
   mainPopup.classList.add("popup_opened");
   document.addEventListener('keydown',escapePopup);
   document.addEventListener('mousedown', escapeOverlayPopup);
@@ -106,9 +125,6 @@ document.addEventListener('keydown',function (evt){
 /*---esc---*/
 
 
-
-
-
 function submitProfilePopup (evt) {
   evt.preventDefault();
   textName.textContent = nameInput.value;
@@ -148,46 +164,57 @@ placePopupClosePopup.addEventListener('click', function(){
 
 
 
-
-
-function createCard(element){
+//  function createCard(element){
   
-  const cardElement = elemTemplate.querySelector('.element').cloneNode(true);
-  const imageBigShow = cardElement.querySelector('.element__image-container');
-  const imageLike = cardElement.querySelector('.element__like');
-  const cardDelete = cardElement.querySelector('.element__garb');
-  const cardImage = cardElement.querySelector ('.element__image');
+//   const cardElement = elemTemplate.querySelector('.element').cloneNode(true);
+//   const imageBigShow = cardElement.querySelector('.element__image-container');
+//   const imageLike = cardElement.querySelector('.element__like');
+//   const cardDelete = cardElement.querySelector('.element__garb');
+//   const cardImage = cardElement.querySelector ('.element__image');
 
 
-  cardElement.querySelector ('.element__place').textContent = element.name;
-  cardImage.src = element.link;
-  cardImage.alt = element.name;
+//    cardElement.querySelector ('.element__place').textContent = element.name;
+//    cardImage.src = element.link;
+//    cardImage.alt = element.name;
 
 
-  imageLike.addEventListener('click', function (evt) {
-    evt.target.classList.toggle('element__like_active');
-  })
+//   imageLike.addEventListener('click', function (evt) {
+//     evt.target.classList.toggle('element__like_active');
+//   })
 
   
-  cardDelete.addEventListener('click', function() {
-    cardElement.remove();
-  });
+  
+//   cardDelete.addEventListener('click', function() {
+//     cardElement.remove();
+//   });
 
 
-  imageBigShow.addEventListener('click', function(){
-    openPopup(imagePopup);
+//   imageBigShow.addEventListener('click', function(){
+//     openPopup(imagePopup);
     
-    bigImageName.textContent = element.name;
-    bigImageLink.src = element.link;
-    bigImageLink.alt = element.name;
-  });
+//     bigImageName.textContent = element.name;
+//     bigImageLink.src = element.link;
+//     bigImageLink.alt = element.name;
+//   });
+
+//   return cardElement;
+// }
+
+function createCard (item) {
+  // Создадим экземпляр карточки
+  const card = new Card(item, '.element-temlate');
+  // Создаём карточку и возвращаем наружу
+  const cardElement = card.generateCard();
 
   return cardElement;
-}
+};
+
 
 imagePopupClosePopup.addEventListener('click', function(){
   closePopup(imagePopup);
 });
+
+
 
 function submitNewCardForm (evt) {
   evt.preventDefault();
@@ -206,34 +233,23 @@ function submitNewCardForm (evt) {
 placePopup.addEventListener('submit', submitNewCardForm);
 
 
-initialCards.forEach(function (element) {
-  baseElements.prepend(createCard(element));
-})
+// initialCards.forEach(function (item) {
+//   baseElements.prepend(createCard(item));
+// })
 
 
+initialCards.forEach((item) => {
+  // Создадим экземпляр карточки
+  const card = new Card(item, '.element-temlate');
+  // Создаём карточку и возвращаем наружу
+  const cardElement = card.generateCard();
+
+  // Добавляем в DOM
+  baseElements.prepend(cardElement);
+});
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+const ValidatorProfilePopup = new FormValidator(settinsList, profilePopup);
+const ValidatorPlacePopup = new FormValidator(settinsList, placePopup );
+ValidatorProfilePopup.enableValidation();
+ValidatorPlacePopup.enableValidation();
