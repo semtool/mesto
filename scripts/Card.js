@@ -12,14 +12,13 @@ export class Card {
 // создадим экземпляр карточки 
   _getTemplate() {
   // забираем разметку из HTML и клонируем элемент
-    const cardElement = document
+    return document
     .querySelector(this._templateSelector)
     .content
     .querySelector('.element')
     .cloneNode(true);
   // вернём DOM-элемент карточки
-    return cardElement;
-  } 
+  }
 
   _setEventListeners() {
     this._element.querySelector('.element__like').addEventListener('click', () => {
@@ -35,7 +34,6 @@ export class Card {
       bigImageLink.alt = this._name;
       openPopup(imagePopup);
     });
-
   }
 
 
@@ -44,7 +42,6 @@ export class Card {
   }
 
   _deleteCardGarbage() {
-    this._element.querySelector('.element__garb');
     this._element.remove();
   }
 

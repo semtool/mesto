@@ -1,11 +1,22 @@
 .popup__container_imagepopup_container {
-
   max-width: 896px;
-  
+  max-height: 602px;
+  width: 100%;
+  height: 100%;
 }
+
+
+@media screen and (max-width:1150px) {
+  .popup__container_imagepopup_container {
+    height: calc(100% - 12vh);
+  }
+}
+
 
 @media screen and (max-width:547px) {
   .popup__container_imagepopup_container {
     max-width: 240px;
+    max-height: 357px;
   }
 }
+

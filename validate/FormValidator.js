@@ -12,7 +12,6 @@
 export class FormValidator {
   constructor(settinsList,formElement ) {
     this._formElement = formElement
-    
     this._inputSelector = settinsList.inputSelector
     this._submitButtonSelector = settinsList.submitButtonSelector
     this._inactiveButtonClass = settinsList.inactiveButtonClass
@@ -55,16 +54,24 @@ export class FormValidator {
     })
   }
 
-  _toggleButtonState () {
-    if (this._hasInvalidInput (this._inputList)) {
-    // сделай кнопку неактивной
+  _switchOnSubmitButton() { 
+    this._buttonElement.classList.remove(this._inactiveButtonClass);
+    this._buttonElement.removeAttribute('disabled'); 
 
+  }
+    switchOffSubmitButton(buttonElement) {
     this._buttonElement.classList.add(this._inactiveButtonClass);
-    this._buttonElement.setAttribute('disabled', true);
+    this._buttonElement.setAttribute('disabled', true);  
+  }
+
+
+  _toggleButtonState () {
+    if (this._hasInvalidInput ()) {
+    // сделай кнопку неактивной
+      this.switchOffSubmitButton(); 
     } else {
     // иначе сделай кнопку активной
-    this._buttonElement.classList.remove(this._inactiveButtonClass);
-    this._buttonElement.removeAttribute('disabled');
+      this._switchOnSubmitButton(); 
     }
   }
 
