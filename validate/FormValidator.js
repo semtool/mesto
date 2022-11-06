@@ -59,7 +59,7 @@ export class FormValidator {
     this._buttonElement.removeAttribute('disabled'); 
 
   }
-    switchOffSubmitButton(buttonElement) {
+    switchOffSubmitButton() {
     this._buttonElement.classList.add(this._inactiveButtonClass);
     this._buttonElement.setAttribute('disabled', true);  
   }

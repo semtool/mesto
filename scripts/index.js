@@ -77,10 +77,10 @@ const baseElements = document.querySelector('.elements');
 
 
 
-function hidePopupSubmitButton (buttonElement){
- buttonElement.classList.add('popup__submit_disabled');
- buttonElement.setAttribute('disabled', true);
-}
+// function hidePopupSubmitButton (buttonElement){
+//  buttonElement.classList.add('popup__submit_disabled');
+//  buttonElement.setAttribute('disabled', true);
+// }
 
 
 
@@ -181,7 +181,8 @@ function submitNewCardForm (evt) {
   baseElements.prepend(createCard(newCard));
   evt.target.reset();
   closePopup(placePopup);
-  hidePopupSubmitButton (placePopupSubmitButton);
+  vidatorPlacePopup.switchOffSubmitButton();
+  // hidePopupSubmitButton (placePopupSubmitButton);
 
 }
 
