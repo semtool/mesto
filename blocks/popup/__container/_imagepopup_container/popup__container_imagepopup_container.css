@@ -10,8 +10,8 @@
   .popup__container_imagepopup_container{
     height: 80vh;
     width: 80vw;
-  
-} 
+  }
+}
 
 
 @media screen and (max-width:547px) {
