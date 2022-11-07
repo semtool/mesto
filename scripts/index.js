@@ -55,13 +55,15 @@ const jobInput = profilePopup.querySelector('.popup__input_person_job');
 const textName = page.querySelector('.profile__title');
 const textJob = page.querySelector('.profile__subtitle');
 
+
+
 const placePopup = page.querySelector ('.place-popup');
 const placePopupOpenButton = page.querySelector('.profile__add');
 const placePopupClosePopup = placePopup.querySelector('.popup__close');
 const namePlaceInput = placePopup.querySelector('.popup__input_place_name');
 const linkPlaceInput = placePopup.querySelector('.popup__input_place_link');
 
-const placePopupSubmitButton = placePopup.querySelector('.popup__submit');
+// const placePopupSubmitButton = placePopup.querySelector('.popup__submit');
 
 
 
@@ -108,7 +110,7 @@ function escapePopup(evt) {
 
 function escapeOverlayPopup(evt) {
   const openPopup = document.querySelector('.popup_opened');
-  if (evt.target === openPopup ) {
+  if (evt.target === openPopup) {
     closePopup(openPopup);
   }
 }
